@@ -10,7 +10,7 @@ class CalculatorContract {
     interface Presenter {
         fun setView(view: View)
         fun start()
-        fun calculate(cmd: String)
+        fun calculate(oper: CalculatorModel.Operator): String
     }
 
 }

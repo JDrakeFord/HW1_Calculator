@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity(), CalculatorContract.View, View.OnClickL
 
     override fun recolor(operator: CalculatorModel.Operator) {
         Log.d("recolor", "its recoloring!")
+        // Reset all operator colors
         findViewById<Button>(R.id.btn_divide).setTextColor(resources.getColor(R.color.white))
         findViewById<Button>(R.id.btn_divide).setBackgroundColor(resources.getColor(R.color.purple))
         findViewById<Button>(R.id.btn_plus).setTextColor(resources.getColor(R.color.white))
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity(), CalculatorContract.View, View.OnClickL
         findViewById<Button>(R.id.btn_minus).setBackgroundColor(resources.getColor(R.color.purple))
         findViewById<Button>(R.id.btn_x).setTextColor(resources.getColor(R.color.white))
         findViewById<Button>(R.id.btn_x).setBackgroundColor(resources.getColor(R.color.purple))
+        // Recolor the passed in operator
         when (operator) {
             CalculatorModel.Operator.DIVIDE -> {
                 findViewById<Button>(R.id.btn_divide).setBackgroundColor(resources.getColor(R.color.white))
